@@ -1,0 +1,15 @@
+version: "3"
+services:
+
+  leanote:
+    image: wekeey/leanote
+    restart: always
+    ports:
+      - "9000:9000"
+    volumes:
+      - leanote.data:/data
+    environment:
+      - SITE_URL="http://note.local.xapp.xyz:9000/"
+
+volumes:
+  leanote.data:
